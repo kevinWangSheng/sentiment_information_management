@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="generator.mapper.WeiboNoteCommentMapper">
+
+    <resultMap id="BaseResultMap" type="generator.domain.WeiboNoteComment">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="user_id" column="user_id" jdbcType="VARCHAR"/>
+            <result property="nickname" column="nickname" jdbcType="VARCHAR"/>
+            <result property="avatar" column="avatar" jdbcType="VARCHAR"/>
+            <result property="gender" column="gender" jdbcType="VARCHAR"/>
+            <result property="profile_url" column="profile_url" jdbcType="VARCHAR"/>
+            <result property="ip_location" column="ip_location" jdbcType="VARCHAR"/>
+            <result property="add_ts" column="add_ts" jdbcType="BIGINT"/>
+            <result property="last_modify_ts" column="last_modify_ts" jdbcType="BIGINT"/>
+            <result property="comment_id" column="comment_id" jdbcType="VARCHAR"/>
+            <result property="note_id" column="note_id" jdbcType="VARCHAR"/>
+            <result property="content" column="content" jdbcType="VARCHAR"/>
+            <result property="create_time" column="create_time" jdbcType="BIGINT"/>
+            <result property="create_date_time" column="create_date_time" jdbcType="VARCHAR"/>
+            <result property="comment_like_count" column="comment_like_count" jdbcType="VARCHAR"/>
+            <result property="sub_comment_count" column="sub_comment_count" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,user_id,nickname,
+        avatar,gender,profile_url,
+        ip_location,add_ts,last_modify_ts,
+        comment_id,note_id,content,
+        create_time,create_date_time,comment_like_count,
+        sub_comment_count
+    </sql>
+</mapper>

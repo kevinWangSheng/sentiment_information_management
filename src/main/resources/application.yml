@@ -1,0 +1,12 @@
+
+server:
+  port: 8088
+  
+spring:
+  datasource:
+    url: jdbc:mysql://124.70.154.169:3306/news_crawl?characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    password: 13379895997.hui
+    username: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+
