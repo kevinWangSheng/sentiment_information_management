@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.kevinwang.dao.KuaishouVideoMapper">
+
+    <resultMap id="BaseResultMap" type="cn.kevinwang.model.dataObject.KuaishouVideo">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="user_id" column="user_id" jdbcType="VARCHAR"/>
+            <result property="nickname" column="nickname" jdbcType="VARCHAR"/>
+            <result property="avatar" column="avatar" jdbcType="VARCHAR"/>
+            <result property="add_ts" column="add_ts" jdbcType="BIGINT"/>
+            <result property="last_modify_ts" column="last_modify_ts" jdbcType="BIGINT"/>
+            <result property="video_id" column="video_id" jdbcType="VARCHAR"/>
+            <result property="video_type" column="video_type" jdbcType="VARCHAR"/>
+            <result property="title" column="title" jdbcType="VARCHAR"/>
+            <result property="desc" column="desc" jdbcType="VARCHAR"/>
+            <result property="create_time" column="create_time" jdbcType="BIGINT"/>
+            <result property="liked_count" column="liked_count" jdbcType="VARCHAR"/>
+            <result property="viewd_count" column="viewd_count" jdbcType="VARCHAR"/>
+            <result property="video_url" column="video_url" jdbcType="VARCHAR"/>
+            <result property="video_cover_url" column="video_cover_url" jdbcType="VARCHAR"/>
+            <result property="video_play_url" column="video_play_url" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,user_id,nickname,
+        avatar,add_ts,last_modify_ts,
+        video_id,video_type,title,
+        desc,create_time,liked_count,
+        viewd_count,video_url,video_cover_url,
+        video_play_url
+    </sql>
+</mapper>
