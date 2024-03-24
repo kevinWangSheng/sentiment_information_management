@@ -6,22 +6,22 @@
 
     <resultMap id="BaseResultMap" type="cn.kevinwang.model.dataObject.BilibiliVideo">
             <id property="id" column="id" jdbcType="INTEGER"/>
-            <result property="user_id" column="user_id" jdbcType="VARCHAR"/>
+            <result property="userId" column="user_id" jdbcType="VARCHAR"/>
             <result property="nickname" column="nickname" jdbcType="VARCHAR"/>
             <result property="avatar" column="avatar" jdbcType="VARCHAR"/>
-            <result property="add_ts" column="add_ts" jdbcType="BIGINT"/>
-            <result property="last_modify_ts" column="last_modify_ts" jdbcType="BIGINT"/>
-            <result property="video_id" column="video_id" jdbcType="VARCHAR"/>
-            <result property="video_type" column="video_type" jdbcType="VARCHAR"/>
+            <result property="addTs" column="add_ts" jdbcType="BIGINT"/>
+            <result property="lastModifyTs" column="last_modify_ts" jdbcType="BIGINT"/>
+            <result property="videoId" column="video_id" jdbcType="VARCHAR"/>
+            <result property="videoType" column="video_type" jdbcType="VARCHAR"/>
             <result property="title" column="title" jdbcType="VARCHAR"/>
             <result property="desc" column="desc" jdbcType="VARCHAR"/>
-            <result property="create_time" column="create_time" jdbcType="BIGINT"/>
-            <result property="liked_count" column="liked_count" jdbcType="VARCHAR"/>
-            <result property="video_play_count" column="video_play_count" jdbcType="VARCHAR"/>
-            <result property="video_danmaku" column="video_danmaku" jdbcType="VARCHAR"/>
-            <result property="video_comment" column="video_comment" jdbcType="VARCHAR"/>
-            <result property="video_url" column="video_url" jdbcType="VARCHAR"/>
-            <result property="video_cover_url" column="video_cover_url" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="BIGINT"/>
+            <result property="likedCount" column="liked_count" jdbcType="VARCHAR"/>
+            <result property="videoPlayCount" column="video_play_count" jdbcType="VARCHAR"/>
+            <result property="videoDanmaku" column="video_danmaku" jdbcType="VARCHAR"/>
+            <result property="videoComment" column="video_comment" jdbcType="VARCHAR"/>
+            <result property="videoUrl" column="video_url" jdbcType="VARCHAR"/>
+            <result property="videoCoverUrl" column="video_cover_url" jdbcType="VARCHAR"/>
     </resultMap>
 
     <sql id="Base_Column_List">
@@ -32,4 +32,26 @@
         video_play_count,video_danmaku,video_comment,
         video_url,video_cover_url
     </sql>
+    <select id="listVideoVOByPage" resultType="cn.kevinwang.model.dataObject.BilibiliVideo">
+        select nickname,video_id,video_type,title,`desc`,create_time,liked_count,video_play_count,video_danmaku,video_comment,video_url from bilibili_video ${ew.customSqlSegment}
+    </select>
+    <select id="listTitleList" resultType="java.lang.String">
+        select title from bilibili_video
+        <where>
+            <if test="title != null and title != ''">
+                and title like "%"#{title}
+            </if>
+        </where>
+    </select>
+    <select id="listCreateTimeLongs" resultType="java.lang.Long">
+        select create_time from bilibili_video
+        <where>
+            <if test="createTime != null and createTime>0">
+                and create_time >= #{createTime}
+            </if>
+        </where>
+    </select>
+    <select id="selectUserInformation" resultType="cn.kevinwang.model.dataObject.BilibiliVideo">
+        select user_id,nickname,avatar from bilibili_video
+    </select>
 </mapper>

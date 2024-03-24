@@ -6,17 +6,17 @@
 
     <resultMap id="BaseResultMap" type="cn.kevinwang.model.dataObject.XhsNoteComment">
             <id property="id" column="id" jdbcType="INTEGER"/>
-            <result property="user_id" column="user_id" jdbcType="VARCHAR"/>
+            <result property="userId" column="user_id" jdbcType="VARCHAR"/>
             <result property="nickname" column="nickname" jdbcType="VARCHAR"/>
             <result property="avatar" column="avatar" jdbcType="VARCHAR"/>
-            <result property="ip_location" column="ip_location" jdbcType="VARCHAR"/>
-            <result property="add_ts" column="add_ts" jdbcType="BIGINT"/>
-            <result property="last_modify_ts" column="last_modify_ts" jdbcType="BIGINT"/>
-            <result property="comment_id" column="comment_id" jdbcType="VARCHAR"/>
-            <result property="create_time" column="create_time" jdbcType="BIGINT"/>
-            <result property="note_id" column="note_id" jdbcType="VARCHAR"/>
+            <result property="ipLocation" column="ip_location" jdbcType="VARCHAR"/>
+            <result property="addTs" column="add_ts" jdbcType="BIGINT"/>
+            <result property="lastModifyTs" column="last_modify_ts" jdbcType="BIGINT"/>
+            <result property="commentId" column="comment_id" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="BIGINT"/>
+            <result property="noteId" column="note_id" jdbcType="VARCHAR"/>
             <result property="content" column="content" jdbcType="VARCHAR"/>
-            <result property="sub_comment_count" column="sub_comment_count" jdbcType="INTEGER"/>
+            <result property="subCommentCount" column="sub_comment_count" jdbcType="INTEGER"/>
     </resultMap>
 
     <sql id="Base_Column_List">
@@ -25,4 +25,23 @@
         last_modify_ts,comment_id,create_time,
         note_id,content,sub_comment_count
     </sql>
+    <select id="selectUserInformationByNoteId" resultType="cn.kevinwang.model.dataObject.XhsNoteComment">
+        select user_id,nickname,avatar,ip_location from xhs_note_comment
+        <where>
+            <if test="noteId != null and noteId != ''">
+                note_id = #{noteId}
+            </if>
+        </where>
+    </select>
+    <select id="selectNoteIdByCommentId" resultType="java.lang.String">
+        select note_id from xhs_note_comment
+        <where>
+            <if test="commentId != null and commentId != ''">
+                comment_id = #{commentId}
+            </if>
+        </where>
+    </select>
+    <select id="selectCommentByVideoId" resultType="cn.kevinwang.model.dataObject.XhsNoteComment">
+        select nickname,avatar,ip_location,comment_id,create_time,note_id,content,sub_comment_count from xhs_note_comment ${ew.customSqlSegment}
+    </select>
 </mapper>

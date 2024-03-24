@@ -6,16 +6,16 @@
 
     <resultMap id="BaseResultMap" type="cn.kevinwang.model.dataObject.BilibiliVideoComment">
             <id property="id" column="id" jdbcType="INTEGER"/>
-            <result property="user_id" column="user_id" jdbcType="VARCHAR"/>
+            <result property="userId" column="user_id" jdbcType="VARCHAR"/>
             <result property="nickname" column="nickname" jdbcType="VARCHAR"/>
             <result property="avatar" column="avatar" jdbcType="VARCHAR"/>
-            <result property="add_ts" column="add_ts" jdbcType="BIGINT"/>
-            <result property="last_modify_ts" column="last_modify_ts" jdbcType="BIGINT"/>
-            <result property="comment_id" column="comment_id" jdbcType="VARCHAR"/>
-            <result property="video_id" column="video_id" jdbcType="VARCHAR"/>
+            <result property="addTs" column="add_ts" jdbcType="BIGINT"/>
+            <result property="lastModifyTs" column="last_modify_ts" jdbcType="BIGINT"/>
+            <result property="commentId" column="comment_id" jdbcType="VARCHAR"/>
+            <result property="videoId" column="video_id" jdbcType="VARCHAR"/>
             <result property="content" column="content" jdbcType="VARCHAR"/>
-            <result property="create_time" column="create_time" jdbcType="BIGINT"/>
-            <result property="sub_comment_count" column="sub_comment_count" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="BIGINT"/>
+            <result property="subCommentCount" column="sub_comment_count" jdbcType="VARCHAR"/>
     </resultMap>
 
     <sql id="Base_Column_List">
@@ -24,4 +24,25 @@
         comment_id,video_id,content,
         create_time,sub_comment_count
     </sql>
+    <select id="selectUserInformationByVideoId"
+            resultType="cn.kevinwang.model.dataObject.BilibiliVideoComment">
+        select user_id,nickname,avatar from bilibili_video_comment
+        <where>
+            <if test="videoId != null and videoId != ''">
+                video_id = #{videoId}
+            </if>
+        </where>
+    </select>
+    <select id="selectVideoIdByCommentId" resultType="java.lang.String">
+        select video_id from bilibili_video_comment
+        <where>
+            <if test="commentId != null and commentId != ''">
+                comment_id = #{commentId}
+            </if>
+        </where>
+    </select>
+    <select id="selectCommentByVideoId" resultType="cn.kevinwang.model.dataObject.BilibiliVideoComment">
+        select nickname,avatar,comment_id,video_id,content,create_time,sub_comment_count from bilibili_video_comment ${ew.customSqlSegment}
+    </select>
+
 </mapper>

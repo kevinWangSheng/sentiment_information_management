@@ -21,7 +21,7 @@ public class WeiboNoteComment implements Serializable {
     /**
      * 用户ID
      */
-    private String user_id;
+    private String userId;
 
     /**
      * 用户昵称
@@ -41,32 +41,32 @@ public class WeiboNoteComment implements Serializable {
     /**
      * 用户主页地址
      */
-    private String profile_url;
+    private String profileUrl;
 
     /**
      * 发布微博的地理信息
      */
-    private String ip_location;
+    private String ipLocation;
 
     /**
      * 记录添加时间戳
      */
-    private Long add_ts;
+    private Long addTs;
 
     /**
      * 记录最后修改时间戳
      */
-    private Long last_modify_ts;
+    private Long lastModifyTs;
 
     /**
      * 评论ID
      */
-    private String comment_id;
+    private String commentId;
 
     /**
      * 帖子ID
      */
-    private String note_id;
+    private String noteId;
 
     /**
      * 评论内容
@@ -76,22 +76,22 @@ public class WeiboNoteComment implements Serializable {
     /**
      * 评论时间戳
      */
-    private Long create_time;
+    private Long createTime;
 
     /**
      * 评论日期时间
      */
-    private String create_date_time;
+    private String createDateTime;
 
     /**
      * 评论点赞数量
      */
-    private String comment_like_count;
+    private String commentLikeCount;
 
     /**
      * 评论回复数
      */
-    private String sub_comment_count;
+    private String subCommentCount;
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
@@ -113,15 +113,15 @@ public class WeiboNoteComment implements Serializable {
     /**
      * 用户ID
      */
-    public String getUser_id() {
-        return user_id;
+    public String getUserId() {
+        return userId;
     }
 
     /**
      * 用户ID
      */
-    public void setUser_id(String user_id) {
-        this.user_id = user_id;
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     /**
@@ -169,85 +169,85 @@ public class WeiboNoteComment implements Serializable {
     /**
      * 用户主页地址
      */
-    public String getProfile_url() {
-        return profile_url;
+    public String getProfileUrl() {
+        return profileUrl;
     }
 
     /**
      * 用户主页地址
      */
-    public void setProfile_url(String profile_url) {
-        this.profile_url = profile_url;
+    public void setProfileUrl(String profileUrl) {
+        this.profileUrl = profileUrl;
     }
 
     /**
      * 发布微博的地理信息
      */
-    public String getIp_location() {
-        return ip_location;
+    public String getIpLocation() {
+        return ipLocation;
     }
 
     /**
      * 发布微博的地理信息
      */
-    public void setIp_location(String ip_location) {
-        this.ip_location = ip_location;
+    public void setIpLocation(String ipLocation) {
+        this.ipLocation = ipLocation;
     }
 
     /**
      * 记录添加时间戳
      */
-    public Long getAdd_ts() {
-        return add_ts;
+    public Long getAddTs() {
+        return addTs;
     }
 
     /**
      * 记录添加时间戳
      */
-    public void setAdd_ts(Long add_ts) {
-        this.add_ts = add_ts;
+    public void setAddTs(Long addTs) {
+        this.addTs = addTs;
     }
 
     /**
      * 记录最后修改时间戳
      */
-    public Long getLast_modify_ts() {
-        return last_modify_ts;
+    public Long getLastModifyTs() {
+        return lastModifyTs;
     }
 
     /**
      * 记录最后修改时间戳
      */
-    public void setLast_modify_ts(Long last_modify_ts) {
-        this.last_modify_ts = last_modify_ts;
+    public void setLastModifyTs(Long lastModifyTs) {
+        this.lastModifyTs = lastModifyTs;
     }
 
     /**
      * 评论ID
      */
-    public String getComment_id() {
-        return comment_id;
+    public String getCommentId() {
+        return commentId;
     }
 
     /**
      * 评论ID
      */
-    public void setComment_id(String comment_id) {
-        this.comment_id = comment_id;
+    public void setCommentId(String commentId) {
+        this.commentId = commentId;
     }
 
     /**
      * 帖子ID
      */
-    public String getNote_id() {
-        return note_id;
+    public String getNoteId() {
+        return noteId;
     }
 
     /**
      * 帖子ID
      */
-    public void setNote_id(String note_id) {
-        this.note_id = note_id;
+    public void setNoteId(String noteId) {
+        this.noteId = noteId;
     }
 
     /**
@@ -267,57 +267,57 @@ public class WeiboNoteComment implements Serializable {
     /**
      * 评论时间戳
      */
-    public Long getCreate_time() {
-        return create_time;
+    public Long getCreateTime() {
+        return createTime;
     }
 
     /**
      * 评论时间戳
      */
-    public void setCreate_time(Long create_time) {
-        this.create_time = create_time;
+    public void setCreateTime(Long createTime) {
+        this.createTime = createTime;
     }
 
     /**
      * 评论日期时间
      */
-    public String getCreate_date_time() {
-        return create_date_time;
+    public String getCreateDateTime() {
+        return createDateTime;
     }
 
     /**
      * 评论日期时间
      */
-    public void setCreate_date_time(String create_date_time) {
-        this.create_date_time = create_date_time;
+    public void setCreateDateTime(String createDateTime) {
+        this.createDateTime = createDateTime;
     }
 
     /**
      * 评论点赞数量
      */
-    public String getComment_like_count() {
-        return comment_like_count;
+    public String getCommentLikeCount() {
+        return commentLikeCount;
     }
 
     /**
      * 评论点赞数量
      */
-    public void setComment_like_count(String comment_like_count) {
-        this.comment_like_count = comment_like_count;
+    public void setCommentLikeCount(String commentLikeCount) {
+        this.commentLikeCount = commentLikeCount;
     }
 
     /**
      * 评论回复数
      */
-    public String getSub_comment_count() {
-        return sub_comment_count;
+    public String getSubCommentCount() {
+        return subCommentCount;
     }
 
     /**
      * 评论回复数
      */
-    public void setSub_comment_count(String sub_comment_count) {
-        this.sub_comment_count = sub_comment_count;
+    public void setSubCommentCount(String subCommentCount) {
+        this.subCommentCount = subCommentCount;
     }
 
     @Override
@@ -333,21 +333,21 @@ public class WeiboNoteComment implements Serializable {
         }
         WeiboNoteComment other = (WeiboNoteComment) that;
         return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
-            && (this.getUser_id() == null ? other.getUser_id() == null : this.getUser_id().equals(other.getUser_id()))
+            && (this.getUserId() == null ? other.getUserId() == null : this.getUserId().equals(other.getUserId()))
             && (this.getNickname() == null ? other.getNickname() == null : this.getNickname().equals(other.getNickname()))
             && (this.getAvatar() == null ? other.getAvatar() == null : this.getAvatar().equals(other.getAvatar()))
             && (this.getGender() == null ? other.getGender() == null : this.getGender().equals(other.getGender()))
-            && (this.getProfile_url() == null ? other.getProfile_url() == null : this.getProfile_url().equals(other.getProfile_url()))
-            && (this.getIp_location() == null ? other.getIp_location() == null : this.getIp_location().equals(other.getIp_location()))
-            && (this.getAdd_ts() == null ? other.getAdd_ts() == null : this.getAdd_ts().equals(other.getAdd_ts()))
-            && (this.getLast_modify_ts() == null ? other.getLast_modify_ts() == null : this.getLast_modify_ts().equals(other.getLast_modify_ts()))
-            && (this.getComment_id() == null ? other.getComment_id() == null : this.getComment_id().equals(other.getComment_id()))
-            && (this.getNote_id() == null ? other.getNote_id() == null : this.getNote_id().equals(other.getNote_id()))
+            && (this.getProfileUrl() == null ? other.getProfileUrl() == null : this.getProfileUrl().equals(other.getProfileUrl()))
+            && (this.getIpLocation() == null ? other.getIpLocation() == null : this.getIpLocation().equals(other.getIpLocation()))
+            && (this.getAddTs() == null ? other.getAddTs() == null : this.getAddTs().equals(other.getAddTs()))
+            && (this.getLastModifyTs() == null ? other.getLastModifyTs() == null : this.getLastModifyTs().equals(other.getLastModifyTs()))
+            && (this.getCommentId() == null ? other.getCommentId() == null : this.getCommentId().equals(other.getCommentId()))
+            && (this.getNoteId() == null ? other.getNoteId() == null : this.getNoteId().equals(other.getNoteId()))
             && (this.getContent() == null ? other.getContent() == null : this.getContent().equals(other.getContent()))
-            && (this.getCreate_time() == null ? other.getCreate_time() == null : this.getCreate_time().equals(other.getCreate_time()))
-            && (this.getCreate_date_time() == null ? other.getCreate_date_time() == null : this.getCreate_date_time().equals(other.getCreate_date_time()))
-            && (this.getComment_like_count() == null ? other.getComment_like_count() == null : this.getComment_like_count().equals(other.getComment_like_count()))
-            && (this.getSub_comment_count() == null ? other.getSub_comment_count() == null : this.getSub_comment_count().equals(other.getSub_comment_count()));
+            && (this.getCreateTime() == null ? other.getCreateTime() == null : this.getCreateTime().equals(other.getCreateTime()))
+            && (this.getCreateDateTime() == null ? other.getCreateDateTime() == null : this.getCreateDateTime().equals(other.getCreateDateTime()))
+            && (this.getCommentLikeCount() == null ? other.getCommentLikeCount() == null : this.getCommentLikeCount().equals(other.getCommentLikeCount()))
+            && (this.getSubCommentCount() == null ? other.getSubCommentCount() == null : this.getSubCommentCount().equals(other.getSubCommentCount()));
     }
 
     @Override
@@ -355,21 +355,21 @@ public class WeiboNoteComment implements Serializable {
         final int prime = 31;
         int result = 1;
         result = prime * result + ((getId() == null) ? 0 : getId().hashCode());
-        result = prime * result + ((getUser_id() == null) ? 0 : getUser_id().hashCode());
+        result = prime * result + ((getUserId() == null) ? 0 : getUserId().hashCode());
         result = prime * result + ((getNickname() == null) ? 0 : getNickname().hashCode());
         result = prime * result + ((getAvatar() == null) ? 0 : getAvatar().hashCode());
         result = prime * result + ((getGender() == null) ? 0 : getGender().hashCode());
-        result = prime * result + ((getProfile_url() == null) ? 0 : getProfile_url().hashCode());
-        result = prime * result + ((getIp_location() == null) ? 0 : getIp_location().hashCode());
-        result = prime * result + ((getAdd_ts() == null) ? 0 : getAdd_ts().hashCode());
-        result = prime * result + ((getLast_modify_ts() == null) ? 0 : getLast_modify_ts().hashCode());
-        result = prime * result + ((getComment_id() == null) ? 0 : getComment_id().hashCode());
-        result = prime * result + ((getNote_id() == null) ? 0 : getNote_id().hashCode());
+        result = prime * result + ((getProfileUrl() == null) ? 0 : getProfileUrl().hashCode());
+        result = prime * result + ((getIpLocation() == null) ? 0 : getIpLocation().hashCode());
+        result = prime * result + ((getAddTs() == null) ? 0 : getAddTs().hashCode());
+        result = prime * result + ((getLastModifyTs() == null) ? 0 : getLastModifyTs().hashCode());
+        result = prime * result + ((getCommentId() == null) ? 0 : getCommentId().hashCode());
+        result = prime * result + ((getNoteId() == null) ? 0 : getNoteId().hashCode());
         result = prime * result + ((getContent() == null) ? 0 : getContent().hashCode());
-        result = prime * result + ((getCreate_time() == null) ? 0 : getCreate_time().hashCode());
-        result = prime * result + ((getCreate_date_time() == null) ? 0 : getCreate_date_time().hashCode());
-        result = prime * result + ((getComment_like_count() == null) ? 0 : getComment_like_count().hashCode());
-        result = prime * result + ((getSub_comment_count() == null) ? 0 : getSub_comment_count().hashCode());
+        result = prime * result + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
+        result = prime * result + ((getCreateDateTime() == null) ? 0 : getCreateDateTime().hashCode());
+        result = prime * result + ((getCommentLikeCount() == null) ? 0 : getCommentLikeCount().hashCode());
+        result = prime * result + ((getSubCommentCount() == null) ? 0 : getSubCommentCount().hashCode());
         return result;
     }
 
@@ -380,21 +380,21 @@ public class WeiboNoteComment implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
-        sb.append(", user_id=").append(user_id);
+        sb.append(", user_id=").append(userId);
         sb.append(", nickname=").append(nickname);
         sb.append(", avatar=").append(avatar);
         sb.append(", gender=").append(gender);
-        sb.append(", profile_url=").append(profile_url);
-        sb.append(", ip_location=").append(ip_location);
-        sb.append(", add_ts=").append(add_ts);
-        sb.append(", last_modify_ts=").append(last_modify_ts);
-        sb.append(", comment_id=").append(comment_id);
-        sb.append(", note_id=").append(note_id);
+        sb.append(", profile_url=").append(profileUrl);
+        sb.append(", ip_location=").append(ipLocation);
+        sb.append(", add_ts=").append(addTs);
+        sb.append(", last_modify_ts=").append(lastModifyTs);
+        sb.append(", comment_id=").append(commentId);
+        sb.append(", note_id=").append(noteId);
         sb.append(", content=").append(content);
-        sb.append(", create_time=").append(create_time);
-        sb.append(", create_date_time=").append(create_date_time);
-        sb.append(", comment_like_count=").append(comment_like_count);
-        sb.append(", sub_comment_count=").append(sub_comment_count);
+        sb.append(", create_time=").append(createTime);
+        sb.append(", create_date_time=").append(createDateTime);
+        sb.append(", comment_like_count=").append(commentLikeCount);
+        sb.append(", sub_comment_count=").append(subCommentCount);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

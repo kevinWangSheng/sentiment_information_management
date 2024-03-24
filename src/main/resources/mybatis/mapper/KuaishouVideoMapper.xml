@@ -6,21 +6,21 @@
 
     <resultMap id="BaseResultMap" type="cn.kevinwang.model.dataObject.KuaishouVideo">
             <id property="id" column="id" jdbcType="INTEGER"/>
-            <result property="user_id" column="user_id" jdbcType="VARCHAR"/>
+            <result property="userId" column="user_id" jdbcType="VARCHAR"/>
             <result property="nickname" column="nickname" jdbcType="VARCHAR"/>
             <result property="avatar" column="avatar" jdbcType="VARCHAR"/>
-            <result property="add_ts" column="add_ts" jdbcType="BIGINT"/>
-            <result property="last_modify_ts" column="last_modify_ts" jdbcType="BIGINT"/>
-            <result property="video_id" column="video_id" jdbcType="VARCHAR"/>
-            <result property="video_type" column="video_type" jdbcType="VARCHAR"/>
+            <result property="addTs" column="add_ts" jdbcType="BIGINT"/>
+            <result property="lastModifyTs" column="last_modify_ts" jdbcType="BIGINT"/>
+            <result property="videoId" column="video_id" jdbcType="VARCHAR"/>
+            <result property="videoType" column="video_type" jdbcType="VARCHAR"/>
             <result property="title" column="title" jdbcType="VARCHAR"/>
             <result property="desc" column="desc" jdbcType="VARCHAR"/>
-            <result property="create_time" column="create_time" jdbcType="BIGINT"/>
-            <result property="liked_count" column="liked_count" jdbcType="VARCHAR"/>
-            <result property="viewd_count" column="viewd_count" jdbcType="VARCHAR"/>
-            <result property="video_url" column="video_url" jdbcType="VARCHAR"/>
-            <result property="video_cover_url" column="video_cover_url" jdbcType="VARCHAR"/>
-            <result property="video_play_url" column="video_play_url" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="BIGINT"/>
+            <result property="likedCount" column="liked_count" jdbcType="VARCHAR"/>
+            <result property="viewdCount" column="viewd_count" jdbcType="VARCHAR"/>
+            <result property="videoUrl" column="video_url" jdbcType="VARCHAR"/>
+            <result property="videoCoverUrl" column="video_cover_url" jdbcType="VARCHAR"/>
+            <result property="videoPlayUrl" column="video_play_url" jdbcType="VARCHAR"/>
     </resultMap>
 
     <sql id="Base_Column_List">
@@ -31,4 +31,26 @@
         viewd_count,video_url,video_cover_url,
         video_play_url
     </sql>
+    <select id="selectVideoVOPage" resultType="cn.kevinwang.model.dataObject.KuaishouVideo">
+        select nickname,video_id,video_type,title,`desc`,create_time,liked_count,viewd_count,video_url from kuaishou_video ${ew.customSqlSegment}
+    </select>
+    <select id="selectTitleList" resultType="java.lang.String">
+        select title from kuaishou_video
+        <where>
+            <if test="title != null and title != ''">
+                and title like "%"#{title}
+            </if>
+        </where>
+    </select>
+    <select id="selectCreateTimeLongs" resultType="java.lang.Long">
+        select create_time from kuaishou_video
+        <where>
+            <if test="createTime != null and createTime>0">
+                and create_time >= #{createTime}
+            </if>
+        </where>
+    </select>
+    <select id="selectUserInformation" resultType="cn.kevinwang.model.dataObject.KuaishouVideo">
+        select user_id,nickname,avatar from kuaishou_video
+    </select>
 </mapper>

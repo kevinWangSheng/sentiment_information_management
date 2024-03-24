@@ -21,7 +21,7 @@ public class BilibiliVideoComment implements Serializable {
     /**
      * 用户ID
      */
-    private String user_id;
+    private String userId;
 
     /**
      * 用户昵称
@@ -36,22 +36,22 @@ public class BilibiliVideoComment implements Serializable {
     /**
      * 记录添加时间戳
      */
-    private Long add_ts;
+    private Long addTs;
 
     /**
      * 记录最后修改时间戳
      */
-    private Long last_modify_ts;
+    private Long lastModifyTs;
 
     /**
      * 评论ID
      */
-    private String comment_id;
+    private String commentId;
 
     /**
      * 视频ID
      */
-    private String video_id;
+    private String videoId;
 
     /**
      * 评论内容
@@ -61,12 +61,12 @@ public class BilibiliVideoComment implements Serializable {
     /**
      * 评论时间戳
      */
-    private Long create_time;
+    private Long createTime;
 
     /**
      * 评论回复数
      */
-    private String sub_comment_count;
+    private String subCommentCount;
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
@@ -88,15 +88,15 @@ public class BilibiliVideoComment implements Serializable {
     /**
      * 用户ID
      */
-    public String getUser_id() {
-        return user_id;
+    public String getUserId() {
+        return userId;
     }
 
     /**
      * 用户ID
      */
-    public void setUser_id(String user_id) {
-        this.user_id = user_id;
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     /**
@@ -130,57 +130,57 @@ public class BilibiliVideoComment implements Serializable {
     /**
      * 记录添加时间戳
      */
-    public Long getAdd_ts() {
-        return add_ts;
+    public Long getAddTs() {
+        return addTs;
     }
 
     /**
      * 记录添加时间戳
      */
-    public void setAdd_ts(Long add_ts) {
-        this.add_ts = add_ts;
+    public void setAddTs(Long addTs) {
+        this.addTs = addTs;
     }
 
     /**
      * 记录最后修改时间戳
      */
-    public Long getLast_modify_ts() {
-        return last_modify_ts;
+    public Long getLastModifyTs() {
+        return lastModifyTs;
     }
 
     /**
      * 记录最后修改时间戳
      */
-    public void setLast_modify_ts(Long last_modify_ts) {
-        this.last_modify_ts = last_modify_ts;
+    public void setLastModifyTs(Long lastModifyTs) {
+        this.lastModifyTs = lastModifyTs;
     }
 
     /**
      * 评论ID
      */
-    public String getComment_id() {
-        return comment_id;
+    public String getCommentId() {
+        return commentId;
     }
 
     /**
      * 评论ID
      */
-    public void setComment_id(String comment_id) {
-        this.comment_id = comment_id;
+    public void setCommentId(String commentId) {
+        this.commentId = commentId;
     }
 
     /**
      * 视频ID
      */
-    public String getVideo_id() {
-        return video_id;
+    public String getVideoId() {
+        return videoId;
     }
 
     /**
      * 视频ID
      */
-    public void setVideo_id(String video_id) {
-        this.video_id = video_id;
+    public void setVideoId(String videoId) {
+        this.videoId = videoId;
     }
 
     /**
@@ -200,29 +200,29 @@ public class BilibiliVideoComment implements Serializable {
     /**
      * 评论时间戳
      */
-    public Long getCreate_time() {
-        return create_time;
+    public Long getCreateTime() {
+        return createTime;
     }
 
     /**
      * 评论时间戳
      */
-    public void setCreate_time(Long create_time) {
-        this.create_time = create_time;
+    public void setCreateTime(Long createTime) {
+        this.createTime = createTime;
     }
 
     /**
      * 评论回复数
      */
-    public String getSub_comment_count() {
-        return sub_comment_count;
+    public String getSubCommentCount() {
+        return subCommentCount;
     }
 
     /**
      * 评论回复数
      */
-    public void setSub_comment_count(String sub_comment_count) {
-        this.sub_comment_count = sub_comment_count;
+    public void setSubCommentCount(String subCommentCount) {
+        this.subCommentCount = subCommentCount;
     }
 
     @Override
@@ -238,16 +238,16 @@ public class BilibiliVideoComment implements Serializable {
         }
         BilibiliVideoComment other = (BilibiliVideoComment) that;
         return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
-            && (this.getUser_id() == null ? other.getUser_id() == null : this.getUser_id().equals(other.getUser_id()))
+            && (this.getUserId() == null ? other.getUserId() == null : this.getUserId().equals(other.getUserId()))
             && (this.getNickname() == null ? other.getNickname() == null : this.getNickname().equals(other.getNickname()))
             && (this.getAvatar() == null ? other.getAvatar() == null : this.getAvatar().equals(other.getAvatar()))
-            && (this.getAdd_ts() == null ? other.getAdd_ts() == null : this.getAdd_ts().equals(other.getAdd_ts()))
-            && (this.getLast_modify_ts() == null ? other.getLast_modify_ts() == null : this.getLast_modify_ts().equals(other.getLast_modify_ts()))
-            && (this.getComment_id() == null ? other.getComment_id() == null : this.getComment_id().equals(other.getComment_id()))
-            && (this.getVideo_id() == null ? other.getVideo_id() == null : this.getVideo_id().equals(other.getVideo_id()))
+            && (this.getAddTs() == null ? other.getAddTs() == null : this.getAddTs().equals(other.getAddTs()))
+            && (this.getLastModifyTs() == null ? other.getLastModifyTs() == null : this.getLastModifyTs().equals(other.getLastModifyTs()))
+            && (this.getCommentId() == null ? other.getCommentId() == null : this.getCommentId().equals(other.getCommentId()))
+            && (this.getVideoId() == null ? other.getVideoId() == null : this.getVideoId().equals(other.getVideoId()))
             && (this.getContent() == null ? other.getContent() == null : this.getContent().equals(other.getContent()))
-            && (this.getCreate_time() == null ? other.getCreate_time() == null : this.getCreate_time().equals(other.getCreate_time()))
-            && (this.getSub_comment_count() == null ? other.getSub_comment_count() == null : this.getSub_comment_count().equals(other.getSub_comment_count()));
+            && (this.getCreateTime() == null ? other.getCreateTime() == null : this.getCreateTime().equals(other.getCreateTime()))
+            && (this.getSubCommentCount() == null ? other.getSubCommentCount() == null : this.getSubCommentCount().equals(other.getSubCommentCount()));
     }
 
     @Override
@@ -255,16 +255,16 @@ public class BilibiliVideoComment implements Serializable {
         final int prime = 31;
         int result = 1;
         result = prime * result + ((getId() == null) ? 0 : getId().hashCode());
-        result = prime * result + ((getUser_id() == null) ? 0 : getUser_id().hashCode());
+        result = prime * result + ((getUserId() == null) ? 0 : getUserId().hashCode());
         result = prime * result + ((getNickname() == null) ? 0 : getNickname().hashCode());
         result = prime * result + ((getAvatar() == null) ? 0 : getAvatar().hashCode());
-        result = prime * result + ((getAdd_ts() == null) ? 0 : getAdd_ts().hashCode());
-        result = prime * result + ((getLast_modify_ts() == null) ? 0 : getLast_modify_ts().hashCode());
-        result = prime * result + ((getComment_id() == null) ? 0 : getComment_id().hashCode());
-        result = prime * result + ((getVideo_id() == null) ? 0 : getVideo_id().hashCode());
+        result = prime * result + ((getAddTs() == null) ? 0 : getAddTs().hashCode());
+        result = prime * result + ((getLastModifyTs() == null) ? 0 : getLastModifyTs().hashCode());
+        result = prime * result + ((getCommentId() == null) ? 0 : getCommentId().hashCode());
+        result = prime * result + ((getVideoId() == null) ? 0 : getVideoId().hashCode());
         result = prime * result + ((getContent() == null) ? 0 : getContent().hashCode());
-        result = prime * result + ((getCreate_time() == null) ? 0 : getCreate_time().hashCode());
-        result = prime * result + ((getSub_comment_count() == null) ? 0 : getSub_comment_count().hashCode());
+        result = prime * result + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
+        result = prime * result + ((getSubCommentCount() == null) ? 0 : getSubCommentCount().hashCode());
         return result;
     }
 
@@ -275,16 +275,16 @@ public class BilibiliVideoComment implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
-        sb.append(", user_id=").append(user_id);
+        sb.append(", user_id=").append(userId);
         sb.append(", nickname=").append(nickname);
         sb.append(", avatar=").append(avatar);
-        sb.append(", add_ts=").append(add_ts);
-        sb.append(", last_modify_ts=").append(last_modify_ts);
-        sb.append(", comment_id=").append(comment_id);
-        sb.append(", video_id=").append(video_id);
+        sb.append(", add_ts=").append(addTs);
+        sb.append(", last_modify_ts=").append(lastModifyTs);
+        sb.append(", comment_id=").append(commentId);
+        sb.append(", video_id=").append(videoId);
         sb.append(", content=").append(content);
-        sb.append(", create_time=").append(create_time);
-        sb.append(", sub_comment_count=").append(sub_comment_count);
+        sb.append(", create_time=").append(createTime);
+        sb.append(", sub_comment_count=").append(subCommentCount);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

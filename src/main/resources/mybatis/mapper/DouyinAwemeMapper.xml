@@ -6,26 +6,26 @@
 
     <resultMap id="BaseResultMap" type="cn.kevinwang.model.dataObject.DouyinAweme">
             <id property="id" column="id" jdbcType="INTEGER"/>
-            <result property="user_id" column="user_id" jdbcType="VARCHAR"/>
-            <result property="sec_uid" column="sec_uid" jdbcType="VARCHAR"/>
-            <result property="short_user_id" column="short_user_id" jdbcType="VARCHAR"/>
-            <result property="user_unique_id" column="user_unique_id" jdbcType="VARCHAR"/>
+            <result property="userId" column="user_id" jdbcType="VARCHAR"/>
+            <result property="secUid" column="sec_uid" jdbcType="VARCHAR"/>
+            <result property="shortUserId" column="short_user_id" jdbcType="VARCHAR"/>
+            <result property="userUniqueId" column="user_unique_id" jdbcType="VARCHAR"/>
             <result property="nickname" column="nickname" jdbcType="VARCHAR"/>
             <result property="avatar" column="avatar" jdbcType="VARCHAR"/>
-            <result property="user_signature" column="user_signature" jdbcType="VARCHAR"/>
-            <result property="ip_location" column="ip_location" jdbcType="VARCHAR"/>
-            <result property="add_ts" column="add_ts" jdbcType="BIGINT"/>
-            <result property="last_modify_ts" column="last_modify_ts" jdbcType="BIGINT"/>
-            <result property="aweme_id" column="aweme_id" jdbcType="VARCHAR"/>
-            <result property="aweme_type" column="aweme_type" jdbcType="VARCHAR"/>
+            <result property="userSignature" column="user_signature" jdbcType="VARCHAR"/>
+            <result property="ipLocation" column="ip_location" jdbcType="VARCHAR"/>
+            <result property="addTs" column="add_ts" jdbcType="BIGINT"/>
+            <result property="lastModifyTs" column="last_modify_ts" jdbcType="BIGINT"/>
+            <result property="awemeId" column="aweme_id" jdbcType="VARCHAR"/>
+            <result property="awemeType" column="aweme_type" jdbcType="VARCHAR"/>
             <result property="title" column="title" jdbcType="VARCHAR"/>
             <result property="desc" column="desc" jdbcType="VARCHAR"/>
-            <result property="create_time" column="create_time" jdbcType="BIGINT"/>
-            <result property="liked_count" column="liked_count" jdbcType="VARCHAR"/>
-            <result property="comment_count" column="comment_count" jdbcType="VARCHAR"/>
-            <result property="share_count" column="share_count" jdbcType="VARCHAR"/>
-            <result property="collected_count" column="collected_count" jdbcType="VARCHAR"/>
-            <result property="aweme_url" column="aweme_url" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="BIGINT"/>
+            <result property="likedCount" column="liked_count" jdbcType="VARCHAR"/>
+            <result property="commentCount" column="comment_count" jdbcType="VARCHAR"/>
+            <result property="shareCount" column="share_count" jdbcType="VARCHAR"/>
+            <result property="collectedCount" column="collected_count" jdbcType="VARCHAR"/>
+            <result property="awemeUrl" column="aweme_url" jdbcType="VARCHAR"/>
     </resultMap>
 
     <sql id="Base_Column_List">
@@ -37,4 +37,26 @@
         create_time,liked_count,comment_count,
         share_count,collected_count,aweme_url
     </sql>
+    <select id="selectDouyinVOList" resultType="cn.kevinwang.model.dataObject.DouyinAweme">
+        select nickname, aweme_id,aweme_type,title,`desc`,create_time,liked_count,comment_count,share_count,collected_count,aweme_url from douyin_aweme ${ew.customSqlSegment}
+    </select>
+    <select id="selectTitleList" resultType="java.lang.String">
+        select title from douyin_aweme
+        <where>
+            <if test="title != null and title != ''">
+                and title like "%"#{title}
+            </if>
+        </where>
+    </select>
+    <select id="selectCreateTimeLongs" resultType="java.lang.Long">
+        select create_time from douyin_aweme
+        <where>
+            <if test="createTime != null and createTime>0">
+                and create_time >= #{createTime}
+            </if>
+        </where>
+    </select>
+    <select id="selectUserInformation" resultType="cn.kevinwang.model.dataObject.DouyinAweme">
+        select user_id,nickname,avatar,ip_location from douyin_aweme
+    </select>
 </mapper>

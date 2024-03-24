@@ -6,24 +6,24 @@
 
     <resultMap id="BaseResultMap" type="cn.kevinwang.model.dataObject.XhsNote">
             <id property="id" column="id" jdbcType="INTEGER"/>
-            <result property="user_id" column="user_id" jdbcType="VARCHAR"/>
+            <result property="userId" column="user_id" jdbcType="VARCHAR"/>
             <result property="nickname" column="nickname" jdbcType="VARCHAR"/>
             <result property="avatar" column="avatar" jdbcType="VARCHAR"/>
-            <result property="ip_location" column="ip_location" jdbcType="VARCHAR"/>
-            <result property="add_ts" column="add_ts" jdbcType="BIGINT"/>
-            <result property="last_modify_ts" column="last_modify_ts" jdbcType="BIGINT"/>
-            <result property="note_id" column="note_id" jdbcType="VARCHAR"/>
+            <result property="ipLocation" column="ip_location" jdbcType="VARCHAR"/>
+            <result property="addTs" column="add_ts" jdbcType="BIGINT"/>
+            <result property="lastModifyTs" column="last_modify_ts" jdbcType="BIGINT"/>
+            <result property="noteId" column="note_id" jdbcType="VARCHAR"/>
             <result property="type" column="type" jdbcType="VARCHAR"/>
             <result property="title" column="title" jdbcType="VARCHAR"/>
             <result property="desc" column="desc" jdbcType="VARCHAR"/>
             <result property="time" column="time" jdbcType="BIGINT"/>
-            <result property="last_update_time" column="last_update_time" jdbcType="BIGINT"/>
-            <result property="liked_count" column="liked_count" jdbcType="VARCHAR"/>
-            <result property="collected_count" column="collected_count" jdbcType="VARCHAR"/>
-            <result property="comment_count" column="comment_count" jdbcType="VARCHAR"/>
-            <result property="share_count" column="share_count" jdbcType="VARCHAR"/>
-            <result property="image_list" column="image_list" jdbcType="VARCHAR"/>
-            <result property="note_url" column="note_url" jdbcType="VARCHAR"/>
+            <result property="lastUpdateTime" column="last_update_time" jdbcType="BIGINT"/>
+            <result property="likedCount" column="liked_count" jdbcType="VARCHAR"/>
+            <result property="collectedCount" column="collected_count" jdbcType="VARCHAR"/>
+            <result property="commentCount" column="comment_count" jdbcType="VARCHAR"/>
+            <result property="shareCount" column="share_count" jdbcType="VARCHAR"/>
+            <result property="imageList" column="image_list" jdbcType="VARCHAR"/>
+            <result property="noteUrl" column="note_url" jdbcType="VARCHAR"/>
     </resultMap>
 
     <sql id="Base_Column_List">
@@ -35,4 +35,27 @@
         comment_count,share_count,image_list,
         note_url
     </sql>
+    <select id="selectListVOPage" resultType="cn.kevinwang.model.dataObject.XhsNote">
+        select nickname, note_id,type,title,`desc`,time,liked_count,collected_count,comment_count,share_count,note_url from xhs_note ${ew.customSqlSegment}
+    </select>
+    <select id="selectTitleList" resultType="java.lang.String">
+        select title from xhs_note
+        <where>
+            title is not null
+            <if test="title != null and title != ''">
+                and title like "%"#{title}
+            </if>
+        </where>
+    </select>
+    <select id="selectCreateTimeLongs" resultType="java.lang.Long">
+        select time from xhs_note
+        <where>
+            <if test="createTime != null and createTime>0">
+                and time >= #{createTime}
+            </if>
+        </where>
+    </select>
+    <select id="selectUserInformation" resultType="cn.kevinwang.model.dataObject.XhsNote">
+        select user_id,nickname,avatar,ip_location from xhs_note
+    </select>
 </mapper>

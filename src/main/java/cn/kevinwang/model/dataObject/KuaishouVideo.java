@@ -21,7 +21,7 @@ public class KuaishouVideo implements Serializable {
     /**
      * 用户ID
      */
-    private String user_id;
+    private String userId;
 
     /**
      * 用户昵称
@@ -36,22 +36,22 @@ public class KuaishouVideo implements Serializable {
     /**
      * 记录添加时间戳
      */
-    private Long add_ts;
+    private Long addTs;
 
     /**
      * 记录最后修改时间戳
      */
-    private Long last_modify_ts;
+    private Long lastModifyTs;
 
     /**
      * 视频ID
      */
-    private String video_id;
+    private String videoId;
 
     /**
      * 视频类型
      */
-    private String video_type;
+    private String videoType;
 
     /**
      * 视频标题
@@ -66,32 +66,32 @@ public class KuaishouVideo implements Serializable {
     /**
      * 视频发布时间戳
      */
-    private Long create_time;
+    private Long createTime;
 
     /**
      * 视频点赞数
      */
-    private String liked_count;
+    private String likedCount;
 
     /**
      * 视频浏览数量
      */
-    private String viewd_count;
+    private String viewdCount;
 
     /**
      * 视频详情URL
      */
-    private String video_url;
+    private String videoUrl;
 
     /**
      * 视频封面图 URL
      */
-    private String video_cover_url;
+    private String videoCoverUrl;
 
     /**
      * 视频播放 URL
      */
-    private String video_play_url;
+    private String videoPlayUrl;
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
@@ -113,15 +113,15 @@ public class KuaishouVideo implements Serializable {
     /**
      * 用户ID
      */
-    public String getUser_id() {
-        return user_id;
+    public String getUserId() {
+        return userId;
     }
 
     /**
      * 用户ID
      */
-    public void setUser_id(String user_id) {
-        this.user_id = user_id;
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     /**
@@ -155,57 +155,57 @@ public class KuaishouVideo implements Serializable {
     /**
      * 记录添加时间戳
      */
-    public Long getAdd_ts() {
-        return add_ts;
+    public Long getAddTs() {
+        return addTs;
     }
 
     /**
      * 记录添加时间戳
      */
-    public void setAdd_ts(Long add_ts) {
-        this.add_ts = add_ts;
+    public void setAddTs(Long addTs) {
+        this.addTs = addTs;
     }
 
     /**
      * 记录最后修改时间戳
      */
-    public Long getLast_modify_ts() {
-        return last_modify_ts;
+    public Long getLastModifyTs() {
+        return lastModifyTs;
     }
 
     /**
      * 记录最后修改时间戳
      */
-    public void setLast_modify_ts(Long last_modify_ts) {
-        this.last_modify_ts = last_modify_ts;
+    public void setLastModifyTs(Long lastModifyTs) {
+        this.lastModifyTs = lastModifyTs;
     }
 
     /**
      * 视频ID
      */
-    public String getVideo_id() {
-        return video_id;
+    public String getVideoId() {
+        return videoId;
     }
 
     /**
      * 视频ID
      */
-    public void setVideo_id(String video_id) {
-        this.video_id = video_id;
+    public void setVideoId(String videoId) {
+        this.videoId = videoId;
     }
 
     /**
      * 视频类型
      */
-    public String getVideo_type() {
-        return video_type;
+    public String getVideoType() {
+        return videoType;
     }
 
     /**
      * 视频类型
      */
-    public void setVideo_type(String video_type) {
-        this.video_type = video_type;
+    public void setVideoType(String videoType) {
+        this.videoType = videoType;
     }
 
     /**
@@ -239,85 +239,85 @@ public class KuaishouVideo implements Serializable {
     /**
      * 视频发布时间戳
      */
-    public Long getCreate_time() {
-        return create_time;
+    public Long getCreateTime() {
+        return createTime;
     }
 
     /**
      * 视频发布时间戳
      */
-    public void setCreate_time(Long create_time) {
-        this.create_time = create_time;
+    public void setCreateTime(Long createTime) {
+        this.createTime = createTime;
     }
 
     /**
      * 视频点赞数
      */
-    public String getLiked_count() {
-        return liked_count;
+    public String getLikedCount() {
+        return likedCount;
     }
 
     /**
      * 视频点赞数
      */
-    public void setLiked_count(String liked_count) {
-        this.liked_count = liked_count;
+    public void setLikedCount(String likedCount) {
+        this.likedCount = likedCount;
     }
 
     /**
      * 视频浏览数量
      */
-    public String getViewd_count() {
-        return viewd_count;
+    public String getViewdCount() {
+        return viewdCount;
     }
 
     /**
      * 视频浏览数量
      */
-    public void setViewd_count(String viewd_count) {
-        this.viewd_count = viewd_count;
+    public void setViewdCount(String viewdCount) {
+        this.viewdCount = viewdCount;
     }
 
     /**
      * 视频详情URL
      */
-    public String getVideo_url() {
-        return video_url;
+    public String getVideoUrl() {
+        return videoUrl;
     }
 
     /**
      * 视频详情URL
      */
-    public void setVideo_url(String video_url) {
-        this.video_url = video_url;
+    public void setVideoUrl(String videoUrl) {
+        this.videoUrl = videoUrl;
     }
 
     /**
      * 视频封面图 URL
      */
-    public String getVideo_cover_url() {
-        return video_cover_url;
+    public String getVideoCoverUrl() {
+        return videoCoverUrl;
     }
 
     /**
      * 视频封面图 URL
      */
-    public void setVideo_cover_url(String video_cover_url) {
-        this.video_cover_url = video_cover_url;
+    public void setVideoCoverUrl(String videoCoverUrl) {
+        this.videoCoverUrl = videoCoverUrl;
     }
 
     /**
      * 视频播放 URL
      */
-    public String getVideo_play_url() {
-        return video_play_url;
+    public String getVideoPlayUrl() {
+        return videoPlayUrl;
     }
 
     /**
      * 视频播放 URL
      */
-    public void setVideo_play_url(String video_play_url) {
-        this.video_play_url = video_play_url;
+    public void setVideoPlayUrl(String videoPlayUrl) {
+        this.videoPlayUrl = videoPlayUrl;
     }
 
     @Override
@@ -333,21 +333,21 @@ public class KuaishouVideo implements Serializable {
         }
         KuaishouVideo other = (KuaishouVideo) that;
         return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
-            && (this.getUser_id() == null ? other.getUser_id() == null : this.getUser_id().equals(other.getUser_id()))
+            && (this.getUserId() == null ? other.getUserId() == null : this.getUserId().equals(other.getUserId()))
             && (this.getNickname() == null ? other.getNickname() == null : this.getNickname().equals(other.getNickname()))
             && (this.getAvatar() == null ? other.getAvatar() == null : this.getAvatar().equals(other.getAvatar()))
-            && (this.getAdd_ts() == null ? other.getAdd_ts() == null : this.getAdd_ts().equals(other.getAdd_ts()))
-            && (this.getLast_modify_ts() == null ? other.getLast_modify_ts() == null : this.getLast_modify_ts().equals(other.getLast_modify_ts()))
-            && (this.getVideo_id() == null ? other.getVideo_id() == null : this.getVideo_id().equals(other.getVideo_id()))
-            && (this.getVideo_type() == null ? other.getVideo_type() == null : this.getVideo_type().equals(other.getVideo_type()))
+            && (this.getAddTs() == null ? other.getAddTs() == null : this.getAddTs().equals(other.getAddTs()))
+            && (this.getLastModifyTs() == null ? other.getLastModifyTs() == null : this.getLastModifyTs().equals(other.getLastModifyTs()))
+            && (this.getVideoId() == null ? other.getVideoId() == null : this.getVideoId().equals(other.getVideoId()))
+            && (this.getVideoType() == null ? other.getVideoType() == null : this.getVideoType().equals(other.getVideoType()))
             && (this.getTitle() == null ? other.getTitle() == null : this.getTitle().equals(other.getTitle()))
             && (this.getDesc() == null ? other.getDesc() == null : this.getDesc().equals(other.getDesc()))
-            && (this.getCreate_time() == null ? other.getCreate_time() == null : this.getCreate_time().equals(other.getCreate_time()))
-            && (this.getLiked_count() == null ? other.getLiked_count() == null : this.getLiked_count().equals(other.getLiked_count()))
-            && (this.getViewd_count() == null ? other.getViewd_count() == null : this.getViewd_count().equals(other.getViewd_count()))
-            && (this.getVideo_url() == null ? other.getVideo_url() == null : this.getVideo_url().equals(other.getVideo_url()))
-            && (this.getVideo_cover_url() == null ? other.getVideo_cover_url() == null : this.getVideo_cover_url().equals(other.getVideo_cover_url()))
-            && (this.getVideo_play_url() == null ? other.getVideo_play_url() == null : this.getVideo_play_url().equals(other.getVideo_play_url()));
+            && (this.getCreateTime() == null ? other.getCreateTime() == null : this.getCreateTime().equals(other.getCreateTime()))
+            && (this.getLikedCount() == null ? other.getLikedCount() == null : this.getLikedCount().equals(other.getLikedCount()))
+            && (this.getViewdCount() == null ? other.getViewdCount() == null : this.getViewdCount().equals(other.getViewdCount()))
+            && (this.getVideoUrl() == null ? other.getVideoUrl() == null : this.getVideoUrl().equals(other.getVideoUrl()))
+            && (this.getVideoCoverUrl() == null ? other.getVideoCoverUrl() == null : this.getVideoCoverUrl().equals(other.getVideoCoverUrl()))
+            && (this.getVideoPlayUrl() == null ? other.getVideoPlayUrl() == null : this.getVideoPlayUrl().equals(other.getVideoPlayUrl()));
     }
 
     @Override
@@ -355,21 +355,21 @@ public class KuaishouVideo implements Serializable {
         final int prime = 31;
         int result = 1;
         result = prime * result + ((getId() == null) ? 0 : getId().hashCode());
-        result = prime * result + ((getUser_id() == null) ? 0 : getUser_id().hashCode());
+        result = prime * result + ((getUserId() == null) ? 0 : getUserId().hashCode());
         result = prime * result + ((getNickname() == null) ? 0 : getNickname().hashCode());
         result = prime * result + ((getAvatar() == null) ? 0 : getAvatar().hashCode());
-        result = prime * result + ((getAdd_ts() == null) ? 0 : getAdd_ts().hashCode());
-        result = prime * result + ((getLast_modify_ts() == null) ? 0 : getLast_modify_ts().hashCode());
-        result = prime * result + ((getVideo_id() == null) ? 0 : getVideo_id().hashCode());
-        result = prime * result + ((getVideo_type() == null) ? 0 : getVideo_type().hashCode());
+        result = prime * result + ((getAddTs() == null) ? 0 : getAddTs().hashCode());
+        result = prime * result + ((getLastModifyTs() == null) ? 0 : getLastModifyTs().hashCode());
+        result = prime * result + ((getVideoId() == null) ? 0 : getVideoId().hashCode());
+        result = prime * result + ((getVideoType() == null) ? 0 : getVideoType().hashCode());
         result = prime * result + ((getTitle() == null) ? 0 : getTitle().hashCode());
         result = prime * result + ((getDesc() == null) ? 0 : getDesc().hashCode());
-        result = prime * result + ((getCreate_time() == null) ? 0 : getCreate_time().hashCode());
-        result = prime * result + ((getLiked_count() == null) ? 0 : getLiked_count().hashCode());
-        result = prime * result + ((getViewd_count() == null) ? 0 : getViewd_count().hashCode());
-        result = prime * result + ((getVideo_url() == null) ? 0 : getVideo_url().hashCode());
-        result = prime * result + ((getVideo_cover_url() == null) ? 0 : getVideo_cover_url().hashCode());
-        result = prime * result + ((getVideo_play_url() == null) ? 0 : getVideo_play_url().hashCode());
+        result = prime * result + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
+        result = prime * result + ((getLikedCount() == null) ? 0 : getLikedCount().hashCode());
+        result = prime * result + ((getViewdCount() == null) ? 0 : getViewdCount().hashCode());
+        result = prime * result + ((getVideoUrl() == null) ? 0 : getVideoUrl().hashCode());
+        result = prime * result + ((getVideoCoverUrl() == null) ? 0 : getVideoCoverUrl().hashCode());
+        result = prime * result + ((getVideoPlayUrl() == null) ? 0 : getVideoPlayUrl().hashCode());
         return result;
     }
 
@@ -380,21 +380,21 @@ public class KuaishouVideo implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
-        sb.append(", user_id=").append(user_id);
+        sb.append(", user_id=").append(userId);
         sb.append(", nickname=").append(nickname);
         sb.append(", avatar=").append(avatar);
-        sb.append(", add_ts=").append(add_ts);
-        sb.append(", last_modify_ts=").append(last_modify_ts);
-        sb.append(", video_id=").append(video_id);
-        sb.append(", video_type=").append(video_type);
+        sb.append(", add_ts=").append(addTs);
+        sb.append(", last_modify_ts=").append(lastModifyTs);
+        sb.append(", video_id=").append(videoId);
+        sb.append(", video_type=").append(videoType);
         sb.append(", title=").append(title);
         sb.append(", desc=").append(desc);
-        sb.append(", create_time=").append(create_time);
-        sb.append(", liked_count=").append(liked_count);
-        sb.append(", viewd_count=").append(viewd_count);
-        sb.append(", video_url=").append(video_url);
-        sb.append(", video_cover_url=").append(video_cover_url);
-        sb.append(", video_play_url=").append(video_play_url);
+        sb.append(", create_time=").append(createTime);
+        sb.append(", liked_count=").append(likedCount);
+        sb.append(", viewd_count=").append(viewdCount);
+        sb.append(", video_url=").append(videoUrl);
+        sb.append(", video_cover_url=").append(videoCoverUrl);
+        sb.append(", video_play_url=").append(videoPlayUrl);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();
